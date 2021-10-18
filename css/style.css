@@ -15,7 +15,7 @@ a:active {
 }
 
 .box {
-  background: green;
+  background: magenta;
   display: block;
   width: 100%;
 }
