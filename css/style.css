@@ -1,0 +1,25 @@
+body {
+  background: royalblue;
+}
+
+a {
+  color: silver;
+}
+
+a:hover {
+  color: #8d8d8d;
+}
+
+a:active {
+  color: orange;
+}
+
+.box {
+
+  display: block;
+  width: 100%;
+}
+
+.list-item {
+  margin: 15px;
+}
