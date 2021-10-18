@@ -15,11 +15,13 @@ a:active {
 }
 
 .box {
-
+  background: green;
   display: block;
   width: 100%;
 }
 
+
 .list-item {
+  list-style: none;
   margin: 15px;
 }
