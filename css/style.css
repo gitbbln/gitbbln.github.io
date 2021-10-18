@@ -15,7 +15,11 @@ a:active {
 }
 
 .box {
+<<<<<<< HEAD
   background: blue;
+=======
+  background: magenta;
+>>>>>>> 68caac5566bd7f64efd2db63c7d0f7b0d5e77d88
   display: block;
   width: 100%;
 }
