@@ -4,18 +4,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samples animations</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Neuromorhism panel buttons</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="dyzMdqO" data-user="gitbbln"
-    style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-    <span>See the Pen <a href="https://codepen.io/gitbbln/pen/dyzMdqO">
-        multi-line typewriter effect</a> by gitbbln (<a href="https://codepen.io/gitbbln">@gitbbln</a>)
-      on <a href="https://codepen.io">CodePen</a>.</span>
-  </p>
-  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  <section id="container" class="panel">
+    <button id="wifi-dark-button" class="action-button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-wifi" aria-hidden="true"></i>
+    </button>
+    <button id="bluetooth-dark-button" class="action-button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-bluetooth-b" aria-hidden="true"></i>
+    </button>
+
+    <button id="bell-dark-button" class="action-button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-bell" aria-hidden="true"></i>
+    </button>
+    <button id="bolt-dark-button" class="action-button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-bolt" aria-hidden="true"></i>
+    </button>
+    <button id="volume-up-dark-button" class="action-button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-volume-up" aria-hidden="true"></i>
+    </button>
+    <button id="plane-dark-button" class="action-button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-plane" aria-hidden="true"></i>
+    </button>
+    <button id="share-dark-button" class="action-button" onclick="changeButtonState(this.id)">
+      <i class="fa fa-share-alt" aria-hidden="true"></i>
+    </button>
+  </section>
+  <script type="text/javascript">
+    changeButtonState = function (idButton) {
+      document.querySelector('#' + idButton).classList.toggle("active");
+    }
+  </script>
 </body>
 
 </html>
