@@ -29,5 +29,5 @@ a:active {
 
 .list-item__selected {
   list-style: none;
-  background-color: orange);
+  background-color: orange;
 }
