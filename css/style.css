@@ -33,6 +33,7 @@ a:active {
 }
 
 .list-item__selected {
+  color:blue;
   list-style: none;
   background-color: orange;
 }
