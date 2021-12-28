@@ -1,0 +1,230 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  color: #212529;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #E74824;
+  font-family: "Source Sans Pro", sans-serif;
+  transition: background-color 0.5s ease-in-out;
+  -webkit-font-smoothing: antialiased;
+}
+
+.Interstitial-wrapper {
+  box-sizing: border-box;
+  width: 686px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.Canvas {
+  position: relative;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 456px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.Canvas-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  z-index: 20;
+}
+
+.Canvas-header-logo {
+  width: 62px;
+  height: 22px;
+  background: transparent url("https://image.ibb.co/bMgqOv/lada_logo_2x.png") 0 0 no-repeat;
+  background-size: 62px 22px;
+}
+
+.Canvas-slides {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.Car {
+  padding-top: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.Car-name,
+.Car-moto,
+.Car-link {
+  position: relative;
+  z-index: 3;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.Car-name {
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 69px;
+  height: 80px;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.Car-name small {
+  font-size: 34px;
+}
+
+.Car-moto {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.Car-moto + .Car-moto {
+  margin-left: 30px;
+  margin-bottom: 8px;
+}
+
+.Car-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 60px;
+}
+
+.Car-decor {
+  top: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.Car-image {
+  position: absolute;
+  top: 120px;
+  right: 5px;
+  z-index: 2;
+}
+
+.Car--niva .Car-link {
+  color: #E74824;
+}
+.Car--niva .Car-image {
+  width: 512px;
+  height: 266px;
+  background: transparent url("https://preview.ibb.co/cnSrVa/niva_clearcut_2x.png") 0 0 no-repeat;
+  background-size: 512px 266px;
+}
+.Car--niva .Car-decor {
+  width: 60px;
+  height: 100%;
+}
+.Car--niva .Car-decor::before {
+  width: 60px;
+  height: 100%;
+  display: block;
+  content: "";
+  background: #E74824;
+  transform: skewX(30deg);
+}
+.Car--niva .Car-decor.one {
+  right: 40px;
+}
+.Car--niva .Car-decor.two {
+  right: 130px;
+}
+.Car--niva .Car-decor.three {
+  right: 220px;
+}
+
+.Car--riva .Car-link {
+  color: #6D889F;
+}
+.Car--riva .Car-image {
+  width: 499px;
+  height: 233px;
+  top: 140px;
+  background: transparent url("https://image.ibb.co/cgiLOv/riva_clearcut.png") 0 0 no-repeat;
+  background-size: 499px 233px;
+}
+.Car--riva .Car-decor::before {
+  display: block;
+  content: "";
+  width: 190px;
+  height: 190px;
+  background: radial-gradient(circle at 111% -6%, #597389, #8babcd);
+  transform: rotate(45deg);
+}
+.Car--riva .Car-decor.one {
+  width: 165px;
+  height: 165px;
+  top: 60px;
+  right: 200px;
+}
+.Car--riva .Car-decor.two {
+  width: 162px;
+  height: 162px;
+  top: 200px;
+  right: 80px;
+}
+.Car--riva .Car-decor.three {
+  width: 190px;
+  height: 190px;
+  top: 24px;
+  right: 24px;
+}
+
+.swiper-container-horizontal > .swiper-pagination {
+  bottom: 24px;
+  background: #EFF0F2;
+  border-radius: 3px;
+  width: auto;
+  left: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.07);
+  border: solid 1px #E9ECEF;
+  transform: translateX(-50%);
+}
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
+  background: none;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  margin: 0;
+}
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet::before {
+  display: block;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+  padding: 10px 30px;
+  color: #495057;
+  cursor: pointer;
+}
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet:nth-child(1)::before {
+  content: "NIVA";
+}
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet:nth-child(2)::before {
+  content: "RIVA";
+}
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::before {
+  background: #FFFFFF;
+}
