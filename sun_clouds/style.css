@@ -1,6 +1,7 @@
 :root {
   --sec: 8s;
-  --y-cloud: 1300px;
+  --y-cloud: 50%;
+  --x-cloud: 170%;
 }
 
 
@@ -56,7 +57,7 @@ img {
   }
 
   100% {
-    transform: translate(5000px, var(--y-cloud));
+    transform: translate(calc(var(--x-cloud)*1), var(--y-cloud));
   }
 
 }
@@ -73,7 +74,7 @@ img {
 
   100% {
 
-    transform: translate(-4000px, var(--y-cloud));
+    transform: translate(calc(var(--x-cloud)*-1), var(--y-cloud));
   }
 
 }
