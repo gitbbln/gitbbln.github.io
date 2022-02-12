@@ -1,0 +1,97 @@
+:root {
+  --sec: 8s;
+  --y-cloud: 50%;
+  --x-cloud: 170%;
+  --width-cloud: 49%;
+  --height-cloud: 49%;
+}
+
+
+body {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+
+.clouds {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+
+  - border-right: #AAA 1px solid;
+  background: blue;
+
+}
+
+.left {
+
+  transform: scale(-1, 1);
+
+}
+
+.div-left {
+  position: absolute;
+  left: 0%;
+  top: 0px;
+  width: var(--width-cloud);
+  height: var(--height-cloud);
+  z-index: 10;
+  animation: move-left var(--sec) forwards;
+
+}
+
+img {
+  vertical-align: top;
+}
+
+
+.right {}
+
+
+.div-right {
+  position: absolute;
+  top: 0px;
+  left: 49%;
+  width: var(--width-cloud);
+  height: var(--height-cloud);
+  animation: move-right var(--sec) forwards;
+  z-index: 1
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateY(calc(var(--y-cloud)*-1));
+
+  }
+
+  30% {
+    transform: translateY(var(--y-cloud));
+  }
+
+  100% {
+    transform: translate(calc(var(--x-cloud)*1), var(--y-cloud));
+  }
+
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateY(calc(var(--y-cloud)*-1));
+    ;
+  }
+
+  30% {
+    transform: translateY(var(--y-cloud));
+  }
+
+  100% {
+
+    transform: translate(calc(var(--x-cloud)*-1), var(--y-cloud));
+  }
+
+}
