@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Browser Detection</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="browser-display" ng-app="broswerDetect" ng-controller="browserCtrl">
+
+    <div class="data-point">
+      <div class="label">
+        Operating System
+      </div>
+      <hr/>
+      <div class="value">
+        {{ systeminfo.os }}
+      </div>
+    </div>
+  
+    <div class="data-point">
+      <div class="label">
+        OS Version
+      </div>
+      <hr/>
+      <div class="value">
+        {{ systeminfo.os_version }}
+      </div>
+    </div>
+    <div class="data-point">
+      <div class="label">
+        Browser
+      </div>
+      <hr/>
+      <div class="value">
+        {{ systeminfo.browser }}
+      </div>
+    </div>
+  
+    <div class="data-point">
+      <div class="label">
+        Version
+      </div>
+      <hr/>
+      <div class="value">
+        {{ systeminfo.browser_major_version }}
+      </div>
+    </div>
+
+    <div class="data-point">
+      <div class="label">
+        Browser Long Version
+      </div>
+      <hr/>
+      <div class="value">
+        {{ systeminfo.browser_version }}
+      </div>
+    </div>
+  
+    <div class="data-point">
+      <div class="label">
+        Mobile
+      </div>
+      <hr/>
+      <div class="value">
+        {{ systeminfo.mobile }}
+      </div>
+    </div>
+  
+    <div class="data-point">
+      <div class="label">
+        Cookies Enabled
+      </div>
+      <hr/>
+      <div class="value">
+        {{ systeminfo.cookies }}
+      </div>
+    </div>
+  
+    <div class="data-point">
+      <div class="label">
+        Window Size
+      </div>
+      <hr/>
+      <div class="value">
+        {{ systeminfo.window }}
+      </div>
+    </div>
+
+
+  
+  
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+body,html {
+  height: 100vh;
+  background: #6DE58D;
+  margin: 0;
+}
+.browser-display {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: sans-serif;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 200px);
+  transform: translateY(-50%);
+}
+
+.data-point {
+  width: 200px;
+  float: left;
+  text-align: left;
+  overflow: hidden;
+  padding: 25px;
+}
+.label {
+  width: 200px;
+  display: block;
+  float: left;
+  font-size: 14px;
+  opacity: 0.5;
+}
+hr {
+  border: 1px solid black;
+  width: 100%;
+  float: left;
+  display: block;
+  opacity: 0.25;
+}
+.value {
+  width: 200px;
+  font-size: 26px;
+  display: block;
+  float: left;
+}
