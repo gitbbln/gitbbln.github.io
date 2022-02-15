@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>
+        Responsive SVG
+    </title>
+</head>
+
+<body>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script>
+    // listen for a window resize event
+    window.addEventListener("resize", resizeSvg)
+
+    // set the canvas width and height based on window dimensions
+    function setCanvasSize() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+    }
+
+    // resize function - called when window is resized
+    function resizeSvg() {
+        // call to set canvas size based on window dimentions
+        setCanvasSize();
+
+        // select svg and set its width and height to new dimentions	
+        d3.select("#canvas-svg")
+            .attr("width", canvas.width)
+            .attr("height", canvas.height)
+
+        // select rect and set its width and height to new dimentions	
+        d3.selectAll("rect")
+            .transition()
+            .ease(d3.easeElastic)
+            .attr("width", canvas.width - margin.left - margin.right)
+            .attr("height", canvas.height - margin.top - margin.bottom)
+
+        // select width text and set its width and height to new dimentions	
+        d3.select("#width-text")
+            .transition()
+            .ease(d3.easeElastic)
+            .attr("x", (canvas.width - margin.left - margin.right) / 2)
+            .text(canvas.width)
+
+        // select height text and set its width and height to new dimentions	
+        d3.select("#height-text")
+            .transition()
+            .ease(d3.easeElastic)
+            .attr("y", (canvas.height - margin.top - margin.bottom) / 2)
+            .text(canvas.height)
+
+
+
+    }
+    // object to hold dimentions of window
+    var canvas = {};
+
+    // call to set canvas size based on window dimentions
+    setCanvasSize();
+
+    // margins - to offset elements inside the svg
+    var margin = {
+        top: 75,
+        bottom: 75,
+        left: 75,
+        right: 75,
+    };
+
+    // create a new svg - sized to the current window size
+    var svg = d3.select("body")
+        .append("svg")
+        .attr("id", "canvas-svg")
+        .attr("width", canvas.width)
+        .attr("height", canvas.height)
+
+    // create a group, and shift it left and down for margins
+    var g = svg.append("g")
+        .attr("id", "canvas-g")
+        .attr("transform", "translate(" + margin.left + ", " + margin.right + ")");
+    // add a rect to the group
+    var rect = g.append("rect")
+        .attr("width", canvas.width - margin.left - margin.right)
+        .attr("height", canvas.height - margin.top - margin.bottom)
+        .attr("fill", "blue")
+
+    // add text to show rectangle's width
+    var widthText = g.append("text")
+        .attr("id", "width-text")
+        .attr("x", (canvas.width - margin.left - margin.right) / 2)
+        .attr("y", 40)
+        .style("text-anchor", "middle")
+        .attr("fill", "#FFFFFF")
+        .attr("font-size", 20)
+        .text(canvas.width)
+
+    // add text to show rectangle's height
+    var heightText = g.append("text")
+        .attr("id", "height-text")
+        .attr("x", 30)
+        .attr("y", (canvas.height - margin.top - margin.bottom) / 2)
+        .attr("fill", "#FFFFFF")
+        .style("writing-mode", "vertical-lr")
+        .attr("font-size", 20)
+        .text(canvas.height)
+    </script>
+</body>
