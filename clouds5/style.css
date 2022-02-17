@@ -1,6 +1,6 @@
 :root {
   --sec: 8s;
-  --y-cloud: 25vh;
+  --y-cloud: 50vh;
   --x-cloud: 100vw;
   --width-cloud: 50vw;
   --height-cloud: 50vh;
@@ -9,7 +9,7 @@
 body {
 	 width: 100vw;
     height: 100vh;
-  background: blue;
+  background: orange;
   
 }
 .line {
