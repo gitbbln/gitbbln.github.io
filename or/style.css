@@ -1,0 +1,31 @@
+*{
+	margin:0;
+	padding: 0; 
+}
+body {
+  -display: flex;
+}
+div {
+  background: yellow;
+}
+.box{
+	position: absolute;	
+	height: 100%;
+	width: 100%;	
+	background:blue;
+}
+
+
+/*@media (orientation: landscape) {
+  body {
+    flex-direction: row;
+  	content: 
+  }
+}
+
+@media (orientation: portrait) {
+  body {
+    -flex-direction: column;
+  }
+*/
+}
