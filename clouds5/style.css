@@ -1,14 +1,14 @@
 :root {
   --sec: 8s;
-  --y-cloud: 50%;
-  --x-cloud: 170%;
-  --width-cloud: 49%;
-  --height-cloud: 50%;
+  --y-cloud: 25vh;
+  --x-cloud: 100vw;
+  --width-cloud: 50vw;
+  --height-cloud: 50vh;
 }
 
 body {
-	 width: 100%;
-    height: 100%;
+	 width: 100vw;
+    height: 100vh;
   background: blue;
   
 }
@@ -18,11 +18,9 @@ body {
 
 
 .clouds {
-display: flex;
+    display: flex;
    justify-content:center;
-   height: 100%;
-   width:  100%;
-
+   
 }
 
 .left {
@@ -48,8 +46,8 @@ img {
 
 
 .div-right {
-  top: 0%;
-  left: 49%;
+  top: 0vh;
+  left: 49vw;
   width: var(--width-cloud);
   height: var(--height-cloud);
   animation: move-right var(--sec) forwards;
