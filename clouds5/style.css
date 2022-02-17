@@ -1,15 +1,15 @@
 :root {
-  --sec: 8s;
-  --y-cloud: 50vh;
+  --sec: 10s;
+  --y-cloud: 40vh;
   --x-cloud: 100vw;
   --width-cloud: 50vw;
   --height-cloud: 50vh;
 }
 
 body {
-	 width: 100vw;
-    height: 100vh;
-  background: orange;
+width: 100vw;
+height: 100vh;
+background: maroon;
   
 }
 .line {
