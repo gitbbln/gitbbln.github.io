@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+
+    --at-point-size: 10px;
+    --color-ray: var(--color-ray);
+    --color-ray: #FFFFCC;
+    --color-sun: #FFFF99;
+        --sec-sun:2s;
+    --sec-cloud:5s;
+    --sec-cloud-delay: 0s;
+
+    --type-anim-sun:linear;
+    --type-anim-cloud:linear;
+  --y-cloud: 30vh;
+  --x-cloud: 120vw;
+  --width-cloud: 50vw;
+  --height-cloud: 50vh;
+  --y-horizont:100vh;
+}
+
+body {
+    background: #3D4A61;
+width: 100vw;
+height: 100vh;
+-background: #3D4A61;
+-background: grey;  
+}
+.line {
+  background: yellow;
+}
+
+
+.clouds {
+    display: flex;
+   justify-content:center;
+   
+}
+
+.left {
+
+  transform: scale(-1, 1);
+
+}
+
+.div-left {
+  width: var(--width-cloud);
+  height: var(--height-cloud);
+  z-index: 10;
+  animation: move-left var(--sec-cloud) var(--sec-cloud-delay) forwards;
+
+}
+
+
+img {
+  vertical-align: top;
+}
+
+
+.right {}
+
+
+.div-right {
+  top: 0vh;
+  left: 49vw;
+  width: var(--width-cloud);
+  height: var(--height-cloud);
+
+  animation: move-right var(--sec-cloud) var(--sec-cloud-delay) forwards;
+
+  z-index: 1
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateY(calc(var(--y-cloud)*-1));
+    ;
+  }
+
+  50% {
+    transform: translateY(var(--y-cloud));
+  }
+
+  100% {
+
+    transform: translate(calc(var(--x-cloud)*-1), var(--y-cloud));
+  }
+
+}
+
+
+@keyframes move-right {
+  0% {
+    transform: translateY(calc(var(--y-cloud)*-1));
+
+  }
+
+  50% {
+    transform: translateY(var(--y-cloud));
+  }
+
+  100% {
+    transform: translate(calc(var(--x-cloud)*1), var(--y-cloud));
+  }
+
+}
+
+@keyframes move-sunrise {
+  0% {
+    transform: translateY(calc(var(--y-horizont)));
+  }
+  100% {
+   transform: translateY(calc(var(--y-cloud)-150));
+  }
+
+}
+
+
+.container {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    -order: 1px solid #333;
+    position: relative;
+    left: 50%;
+    top: 50%;
+
+    margin-top: 150px;
+    -background: maroon;
+    -background: #fff;
+    z-index: 100;
+}
+
+.container-above {
+
+    border-radius: 50%;
+    box-sizing: border-box;
+    -order: 1px solid #333;
+    position: absolute;
+
+
+
+    background-color: rgba(255, 255, 204);
+    background-color: var(--color-sun);
+    background-color: 'green';
+    animation: move-sunrise var(--sec-sun) var(--type-anim-sun) forwards;
+    z-index: 200;
+}
+
+.point {
+    /*top: 100px;
+  left: 100px;*/
+    position: relative;
+    background: red;
+    height: 5px;
+    width: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+
+.at-point {
+    position: absolute;
+    background: green;
+    height: var(--at-point-size);
+    width: var(--at-point-size);
+    box-sizing: border-box;
+    border-radius: var(--at-point-size);
+    left: 50%;
+    top: 50%;
+
+}
+
+.ht {
+
+    height: 4px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    width: 300px;
+    -bottom: 0;
+    background: #aaa;
+    box-shadow: 0px 0px 3px 2px #aaa;
+    -background: #bebeff;
+    -box-shadow: 0 0 5px 5px #00f, 0 0 5px 5px #00f;
+    /*, 0 0 3px 2px #00f;*/
+    -border-radius: 20px;
+    -transition: all3 4s var(--type-anim-cloud);
+    transform-origin: 0 0;
+    transition-property: all;
+    transition-duration: 2.6s;
+    transition-timing-function: var(--type-anim-cloud);
+    -transition-timing-function: ease-out;
+    -transition-timing-function: var(--type-anim-cloud);
+    -animation: render 10s var(--type-anim-cloud) infinite;
+
+    box-shadow: inset 0 0 6px black;
+    -border: 1px solid black;
+    border-radius: 5px 5px 5px 5px;
+    -width: 300px;
+    -height: 50px;
+    background-color: rgba(255, 255, 204, 0.6);
+    -background: var(--color-ray);
+    box-shadow: 0 0 80px var(--color-ray), 0 0 80px var(--color-ray), 0 0 80px var(--color-ray), 0 0 100px var(--color-ray);
+    z-index: 150;
+}
+
+.ht:hover {
+    transform: scale(1.7);
+
+}
+
+.py {
+    position: absolute;
+    transform-origin: 0 0;
+    transform: rotate(45deg);
+    left: 50%;
+    top: 50%;
+
+
+}
+
+@keyframes render {
+    0% {
+        width: 100%;
+    }
+
+    50% {
+        width: 70%;
+    }
+}
